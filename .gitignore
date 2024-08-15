@@ -2,6 +2,9 @@
 /node_modules
 ./Frontend/node_models
 ./Backend/node_models
+# node models
+node_modules/
+models/
 /public/build
 /public/hot
 /public/storage
