@@ -1,13 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import AuthLayout from "./_Auth/AuthLayout";
-import Form from "./_Auth/Forms/Form";
-import Form from "./";
+import Form from "./_Auth/Form";
+import Home from "./_Root/Home";
 function App() {
   return (
     <Routes>
-      <Route element={<AuthLayout />}>
-        <Route path="/login" element={<Form />} />
-      </Route>
+      <Route path="/login" element={<Form />} />
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }

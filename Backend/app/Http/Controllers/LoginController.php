@@ -45,7 +45,7 @@ class LoginController extends Controller
     //If So , Return back A Auth Token
     if ($user) {
       $user->update(['login_code' => null]);
-      return $user->createToken($request->login_code)->plainTextToken;
+      return response()->json(['token' => $user->createToken($request->login_code)->plainTextToken], 200);
     }
 
     // // If Not , Return back Message
